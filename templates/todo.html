@@ -1,0 +1,10 @@
+{{range .list}}
+<div>
+  <span>{{.ID}}</span>
+  <span>{{.Title}}</span>
+  <form hx-delete="/delete-todo/{{.ID}}" hx-target="#todo-list">
+    <input type="hidden" name="id" value="{{.ID}}" />
+    <button type="submit">Delete</button>
+  </form>
+</div>
+{{end}}
